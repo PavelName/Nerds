@@ -1,0 +1,17 @@
+.visually-hidden {
+    visibility: hidden;
+}
+
+.slider-toggle .slider-toggle-item--1::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 4px;
+    height: 4px;
+    margin: -4px;
+    background-color: inherit;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+}
