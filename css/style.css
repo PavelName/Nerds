@@ -1,1 +1,30 @@
+/* styles and footer */
 
+svg {
+    background-color: blue;
+    color: brown;
+}
+.my-footer .container, .social-list, .social-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.social-list {
+    padding: 0;
+    margin: 0 140px 0 0;
+}
+.social-item {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #e1e1e1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.social-item:last-child {
+    margin-right: 0;
+}
