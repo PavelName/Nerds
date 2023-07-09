@@ -52,70 +52,161 @@ body {
     color: #000;
 }
 
+main {
+    min-width: 1200px;
+}
+
 a {
    text-decoration: none; 
 }
 
-
-
-
-/* styles and footer */
-
-
-.my-footer .container, .social-list, .social-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-.social-list {
-    padding: 0;
-    margin: 0 140px 0 0;
-}
-.social-item {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #e1e1e1;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-.social-item:last-child {
-    margin-right: 0;
+.filter ul, ul {
+  list-style: none;  
+  margin: 0;
+  padding: 0;
 }
 
-/* 
+
 .main-header {
+    margin: 0;
+    min-width: 1200px;
+    padding: 50px 0 0;
+    background-color: #eee;
 }
+
 .container {
+    margin: 0 auto;
+    padding: 0;
+    min-width: 1160px;
+    min-height: 100px;
+    position: relative;
 }
-.main-navigation {
+
+
+.main-navigation .main-header-logo {
+    position: absolute;
 }
-.main-header-logo {
+ 
+
+.main-navigation .wrapper {
+    display: flex;
+    padding-top: 28px;
+    margin-left: 360px;
+    text-transform: uppercase;
 }
-.wrapper {
+
+.main-navigation .site-navigation {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-.site-navigation {
+
+.site-navigation li {
+    margin-right: 46px;
 }
-.basket {
+
+.main-navigation .basket {
+    display: flex;
+    margin: 0 0 0 auto;
+    padding: 0;
+    list-style: none;
+
 }
-.visually-hidden {
+
+.basket svg {
+   margin-right: 25px; 
+   align-self: center;
+   fill: #ababab;
 }
+.visually-hidden:not(:focus):not(:active),input[type=checkbox].visually-hidden,input[type=radio].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    bottom: 0;
+    padding: 0;
+    white-space: nowrap;
+    /* -webkit-clip-path:inset(100%); */
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+
+.basket a, .site-navigation a {
+    color: #000;
+    font-weight: 500;
+}
+
+.basket a:hover, .site-navigation a:hover {
+ color: #fb565a;
+}
+.basket a:focus, .site-navigation a:focus {
+    color: #bdbdbd;
+}
+.site-navigation .active {
+    border-bottom: 2px solid #fb565a;
+}
+
 .slider {
+    position: relative;
+    border-color: #eee;
 }
 .slider-controls {
+    position:absolute;
+    left: 50%;
+    bottom: 100px;
+    z-index: 100;
+    width: 160px;
+    height: 18px;
+    text-align: center;
+    font-size: 0;
+    transform: translate(-50%);
 }
-.slider-controls-item {
+
+
+.slider-controls label{
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
 }
-.slider-controls-item--1 {
+
+.slider-controls label::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    border-radius: 50%;
 }
-.slider-controls-item--2 {
+
+#offer-1:checked~.slider-controls .slider-controls-item--1::before,offer-2:checked~.slider-controls .slider-controls-item--2::before,offer-3:checked~.slider-controls .slider-controls-item--3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 4px;
+    height: 4px;
+    margin: -4px;
+    border-color: inherit;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+
 }
-.slider-controls-item--3 {
-}
+
+
+ 
+
 .slider-list {
 }
 .slider-item {
@@ -123,6 +214,10 @@ a {
 .slider-item-button {
 }
 .button {
+border: 0;
+background: 0 0;
+
+
 }
 .services {
 }
@@ -162,6 +257,37 @@ a {
 }
 .button-adres {
 }
+
+/* styles and footer */
+
+
+.my-footer .container, .social-list, .social-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.social-list {
+    padding: 0;
+    margin: 0 140px 0 0;
+}
+.social-item {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #e1e1e1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.social-item:last-child {
+    margin-right: 0;
+}
+/* footer end */
+
+
 .my-footer {
 }
 .footer-social {
@@ -184,5 +310,3 @@ a {
 }
 .modal-close {
 }
-
-*/
