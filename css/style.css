@@ -406,7 +406,7 @@ background-color:#efc849;
     padding: 60px 0 20px;
     border-bottom: 2px solid #eee;
 }
-.partners-list .partners {
+.partners .partners-list  {
     display: flex;
     list-style: none;
     padding: 0;
@@ -455,18 +455,77 @@ background-color:#efc849;
 
 
 
-.partners-item
+.partners-item:last-child::after {
+    display: none;
+}
+
+.partners-item a {
+    opacity: .2;
+}
+
+.partners-item a:hover {
+    opacity: 1;
+}
+
+.partners-item a:focus {
+    opacity: .1;
+}
+.map .container {
+    min-height: 230px;
+    padding-top: 55px;
+    z-index: 2;
+}
+
 .map {
+    margin-top: 80px;
+    background-image: url(../img/map\ 1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    background-size: cover;
+    height: 420px;
 }
-.addres {
+.map iframe {
+    position: absolute;
+    width: 100%;
+    height: 420px;
 }
+
+.map .addres {
+    width: 295px;
+    padding: 32px 10px 46px;
+    background-color: #fff;
+}
+
+
+.addres h3 {
+    margin-left: 38px;
+}
+
+.addres p {
+    padding: 0 40px;
+    margin-top: 24px;
+    letter-spacing: .1px;
+    line-height: 18px;
+}
+
+.addres span {
+    margin-left: 40px;
+}
+
 .button-adres {
+    width: 220px;
+    margin-left: 40px;
+    margin-top: 35px;
 }
 
 /* styles and footer */
 
+ .my-footer {
+    padding-top: 66px;
+ }
 
-.my-footer .container, .social-list, .social-item {
+
+.my-footer .container, .social-list, .social-item, .sorting ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
